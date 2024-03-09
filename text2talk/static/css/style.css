@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Protest Riot;
+  font-size: 2.75rem;
+}
+
+a,
+em {
+  font-family: "Courier New";
+  font-size: 2rem;
+  color: rgb(60, 60, 60);
+  text-decoration: none;
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 2rem;
+  height: 10vh;
+}
+
+a:hover {
+  position: relative;
+  color: brown;
+  animation: mymove 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.box {
+  position: absolute;
+  width: 45rem;
+  height: 15rem;
+  z-index: -1;
+  padding: 1rem;
+  transform: rotate(185deg);
+  /*  background-color: rgb(188, 217, 246); */
+  /* From https://css.glass */
+  background: rgba(142, 176, 254, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.4px);
+  -webkit-backdrop-filter: blur(0.4px);
+  border: 1px solid rgba(142, 176, 254, 0.08);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  height: 90vh;
+}
+
+img {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 50vw;
+  aspect-ratio: 2/1;
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 75px;
+  }
+}
