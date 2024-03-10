@@ -6,7 +6,8 @@ from django.conf.urls.static import static
 urlpatterns = [
 	path("", views.index, name="index"),
 	path("textOcr/", views.image_to_text, name="textOcr"),
-	path("talkOcr/", views.text_to_speech, name="talkOcr")
+	path("talkOcr/", views.text_to_speech, name="talkOcr"),
+	path("upload/", views.file_upload, name="upload"),
 	# path("live/", views.video_feed, name="live"),
 ]
 

@@ -36,3 +36,18 @@ def text_to_speech(request):
     tts.save(output_path)
 
     return render(request, 'talkOcr.html', {'image': uploaded_image_name})
+
+def file_upload(request):
+    if request.method == 'POST':
+        form = forms.ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            uploaded_image = form.save()
+            
+            global uploaded_image_name
+            uploaded_image_name = uploaded_image.image.name
+
+            return redirect('textOcr')
+
+    else:
+        form = forms.ImageUploadForm()
+    return render(request, 'file_upload.html', {'form': form})

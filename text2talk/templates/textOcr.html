@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}{% load static %} {% block content %}
+
+<div class="container">
+  <div>
+    <img id="uploaded-image" src="{% static image %}" />
+  </div>
+
+  <section class="action-container">
+    <p class="text">Text :</p>
+    <em>{{ text_result }}</em>
+
+    <a href="/talkOcr" class="btn">Next</a>
+  </section>
+</div>
+{% endblock %}
