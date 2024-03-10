@@ -70,14 +70,6 @@ em {
   height: 10vh;
 }
 
-a:hover {
-  position: relative;
-  color: brown;
-  animation: mymove 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-}
-
 .box {
   position: absolute;
   width: 45rem;
@@ -119,22 +111,38 @@ img {
   border-radius: 8px;
   padding: 8px;
   background-color: rgb(40, 60, 20);
-  font: 700 20px "Courier New";
+  font: 700 16px "Courier New";
   color: white;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.btn:hover {
+  background-color: rgba(40, 60, 20, 0.705);
+}
+
 .action-container {
+  position: relative;
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 2rem;
   width: 40vw;
-  height: 10vh;
+  min-height: 14vh;
   border-radius: 8px;
+  gap: 16px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  flex: 30%;
+  gap: 8px;
 }
 
 input {
@@ -143,5 +151,5 @@ input {
 
 label,
 .text {
-  font: 700 20px "Rowdies", sans-serif;
+  font: 700 16px "Rowdies", sans-serif;
 }

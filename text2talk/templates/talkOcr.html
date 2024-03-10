@@ -6,13 +6,20 @@
   </div>
 
   <section class="action-container">
-    <p class="text">Speech Conversion:</p>
+    <div class="col">
+      <p class="text">Speech Conversion:</p>
 
-    <audio id="myAudio" controls>
-      <source src="{% static 'tts.mp3' %}" type="audio/mp3" />
-    </audio>
+      <audio id="myAudio" controls>
+        <source src="{% static 'tts.mp3' %}" type="audio/mp3" />
+      </audio>
+    </div>
 
-    <a href="/upload" class="btn">Another</a>
+    <a href="/textOcr" class="btn"
+      ><i class="fa fa-chevron-circle-left" id="icon"></i> TextOcr</a
+    >
+    <a href="/talkOcr" class="btn"
+      >New <i class="fa fa-chevron-circle-right" id="icon"></i
+    ></a>
   </section>
 </div>
 

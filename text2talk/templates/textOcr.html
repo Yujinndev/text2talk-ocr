@@ -6,10 +6,17 @@
   </div>
 
   <section class="action-container">
-    <p class="text">Text :</p>
-    <em>{{ text_result }}</em>
+    <div class="col">
+      <p class="text">Text Conversion:</p>
+      <em>{{ text_result }}</em>
+    </div>
 
-    <a href="/talkOcr" class="btn">Next</a>
+    <a href="/upload" class="btn"
+      ><i class="fa fa-chevron-circle-left" id="icon"></i>Back</a
+    >
+    <a href="/talkOcr" class="btn"
+      >TalkOcr <i class="fa fa-chevron-circle-right" id="icon"></i
+    ></a>
   </section>
 </div>
 {% endblock %}
