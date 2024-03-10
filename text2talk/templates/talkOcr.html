@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %}{% load static %} {% block content %}
+
+<div class="container">
+  <div>
+    <img id="uploaded-image" src="{% static image %}" />
+  </div>
+
+  <section class="action-container">
+    <p class="text">Speech Conversion:</p>
+
+    <audio id="myAudio" controls>
+      <source src="{% static 'tts.mp3' %}" type="audio/mp3" />
+    </audio>
+
+    <a href="/upload" class="btn">Another</a>
+  </section>
+</div>
+
+{% endblock %}

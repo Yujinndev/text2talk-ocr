@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
@@ -11,15 +19,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(245, 245, 245);
   flex-direction: column;
-  font-family: Protest Riot;
-  font-size: 2.75rem;
+  font-size: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.5rem;
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  z-index: 1;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  font: 700 20px "Rowdies", sans-serif;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  font: 700 20px "Courier New";
+  padding: 0;
+  margin: 0;
+  z-index: 1;
 }
 
 a,
 em {
-  font-family: "Courier New";
-  font-size: 2rem;
+  font-size: 18px;
   color: rgb(60, 60, 60);
   text-decoration: none;
 }
@@ -66,20 +102,46 @@ a:hover {
   position: relative;
   flex-direction: column;
   height: 90vh;
+  gap: 16px;
 }
 
 img {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  width: 50vw;
-  aspect-ratio: 2/1;
+  width: 40vw;
+  aspect-ratio: 3/2;
 }
 
-@keyframes mymove {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 75px;
-  }
+.btn {
+  outline: none;
+  border: none;
+  /* width: ; */
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgb(40, 60, 20);
+  font: 700 20px "Courier New";
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  width: 40vw;
+  height: 10vh;
+  border-radius: 8px;
+}
+
+input {
+  border: none;
+}
+
+label,
+.text {
+  font: 700 20px "Rowdies", sans-serif;
 }

@@ -9,10 +9,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Text2Talk - OCR</title>
   </head>
   <body>
+    <header>
+      <div class="brand">Text2Talk</div>
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/upload">Upload</a></li>
+        <li><a href="/live">LiveCam</a></li>
+      </ul>
+    </header>
     {% block content %}{% endblock %}
   </body>
+
+  <script src="{% static 'js/index.js' %}"></script>
 </html>
