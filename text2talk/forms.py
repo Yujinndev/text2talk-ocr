@@ -15,3 +15,20 @@ class ImageUploadForm(forms.ModelForm):
             if image.content_type not in allowed_types:
                 raise forms.ValidationError('File type is not supported. Please upload a valid image.')
         return image
+
+class TextInputForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+            
+    class Meta:
+        model = models.TextInput
+        fields = ['text']
+
+    text = forms.CharField(
+        label='Text to convert',
+        max_length=64,
+        required=True,
+        widget=forms.TextInput(attrs={'autocomplete': 'off'})
+    )

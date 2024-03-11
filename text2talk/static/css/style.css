@@ -97,17 +97,36 @@ em {
   gap: 16px;
 }
 
-img {
+img,
+video,
+canvas {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   width: 40vw;
   aspect-ratio: 3/2;
 }
 
+.textInputImg {
+  position: absolute;
+}
+
+video {
+  transform: scaleX(1);
+}
+
+.preview {
+  position: relative;
+}
+
+.captureButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .btn {
   outline: none;
   border: none;
-  /* width: ; */
   border-radius: 8px;
   padding: 8px;
   background-color: rgb(40, 60, 20);
@@ -116,6 +135,7 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 10;
 }
 
 .btn:hover {
@@ -152,4 +172,11 @@ input {
 label,
 .text {
   font: 700 16px "Rowdies", sans-serif;
+}
+
+.form-control {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  width: 20rem;
 }

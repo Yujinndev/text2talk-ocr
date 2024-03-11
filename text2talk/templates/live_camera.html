@@ -1,7 +1,65 @@
-{% extends 'layout/base.html' %}{% load static %} {% block content %}
+{% load static %}
 
-<div class="container">
-  <img src="{% url 'video_feed' %}" />
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script defer src="{% static 'js/webcam.js' %}"></script>
+    <title>Text2Talk - OCR</title>
+  </head>
+  <body>
+    <header>
+      <div class="brand">Text2Talk</div>
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/input">Text Input</a></li>
+        <li><a href="/upload">Upload</a></li>
+        <li><a href="/live">LiveCam</a></li>
+      </ul>
+    </header>
 
-{% endblock %}
+    <div class="container">
+      <div class="preview">
+        <video id="video" autoplay muted></video>
+        <img id="previewImage" style="display: none" />
+        <button id="captureButton" class="btn captureButton">
+          Capture <i class="fa fa-camera" id="icon"></i>
+        </button>
+        <button
+          id="newCaptureButton"
+          class="btn captureButton"
+          style="display: none"
+        >
+          Another <i class="fa fa-camera" id="icon"></i>
+        </button>
+      </div>
+
+      <section class="action-container">
+        <div class="col">
+          <p class="text" id="response-text"></p>
+        </div>
+
+        <button
+          type="submit"
+          id="submit-capture"
+          class="btn"
+          style="display: none"
+        >
+          Upload <i class="fa fa-chevron-circle-right" id="icon"></i>
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

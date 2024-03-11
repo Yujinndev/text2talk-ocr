@@ -16,19 +16,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script defer src="{% static 'js/index.js' %}"></script>
+    <!-- <script defer src="{% static 'js/script.js' %}"></script> -->
+
     <title>Text2Talk - OCR</title>
   </head>
+
   <body>
     <header>
       <div class="brand">Text2Talk</div>
       <ul class="links">
         <li><a href="/">Home</a></li>
+        <li><a href="/input">Text Input</a></li>
         <li><a href="/upload">Upload</a></li>
         <li><a href="/live">LiveCam</a></li>
       </ul>
     </header>
     {% block content %}{% endblock %}
   </body>
-
-  <script src="{% static 'js/index.js' %}"></script>
 </html>
